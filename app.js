@@ -34,13 +34,13 @@ var firstwagervar = 0;
 var curmultiplierdivision = 1;
 var config = {
   // - Your app's id on moneypot.com
-  app_ida: 1279,                             // <----------------------------- EDIT ME!
+  app_ida: 2365,                             // <----------------------------- EDIT ME!
   // - Displayed in the navbar
-  app_name: 'Bustapot',
+  app_name: 'BoostPot',
   // - For your faucet to work, you must register your site at Recaptcha
   // - https://www.google.com/recaptcha/intro/index.html
-  recaptcha_sitekey: '6LfCZyATAAAAADvQosXI8YCemiHTR1rtBG30lswx',  // <----- EDIT ME!
-  redirect_uri: 'http://www.bustapot.pw',
+  recaptcha_sitekey: '6LelhQoUAAAAAP5g23Zhg9fdSXyte1HN6kF3QlKH',  // <----- EDIT ME!
+  redirect_uri: 'http://boost.btcpot.cf',
   mp_browser_uri: 'https://www.moneypot.com',
   mp_api_uri: 'https://api.moneypot.com',
   chat_uri: 'https://socket.moneypot.com',
@@ -142,11 +142,11 @@ helpers.calcNumber = function(cond, winProb) {
 helpers.roleToLabelElement = function(role) {
   switch(role) {
     case 'ADMIN':
-      return el.span({className: 'label label-danger'}, 'MP Staff');
+      return el.span({className: 'label label-info'}, 'MP Staff');
     case 'MOD':
-      return el.span({className: 'label label-info'}, 'Mod');
+      return el.span({className: 'label label-success'}, 'Staff');
     case 'OWNER':
-      return el.span({className: 'label label-primary'}, 'Owner');
+      return el.span({className: 'label label-danger'}, 'Owner');
     default:
       return '';
   }
@@ -3571,5 +3571,3 @@ window.addEventListener('message', function(event) {
     Dispatcher.sendAction('START_REFRESHING_USER');
   }
 }, false);
-
-// Edited for automation by https://www.moneypot.com/users/gapjustin
