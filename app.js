@@ -142,11 +142,11 @@ helpers.calcNumber = function(cond, winProb) {
 helpers.roleToLabelElement = function(role) {
   switch(role) {
     case 'ADMIN':
-      return el.span({className: 'label label-info'}, 'MP Staff');
+      return el.span({className: 'label label-danger'}, 'MP Staff');
     case 'MOD':
-      return el.span({className: 'label label-success'}, 'Staff');
+      return el.span({className: 'label label-info'}, 'Mod');
     case 'OWNER':
-      return el.span({className: 'label label-danger'}, 'Owner');
+      return el.span({className: 'label label-primary'}, 'Owner');
     default:
       return '';
   }
