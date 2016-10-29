@@ -51,7 +51,7 @@ var config = {
   //force_httpss_redirect: !isRunningLocally(),
   // - Configure the house edge (default is 1%)
   //   Must be between 0.0 (0%) and 1.0 (100%)
-  house_edge: 0.005,
+  house_edge: 0.01,
   chat_buffer_size: 100,
   // - The amount of bets to show on screen in each tab
   bet_buffer_size: 25
@@ -423,7 +423,7 @@ localStorage.setItem('referer', referer);
 
 // Scrub fragment params from url.
 if (window.history && window.history.replaceState) {
-  window.history.replaceState({}, window.location.href, "http://www.bustapot.pw");
+  window.history.replaceState({}, window.location.href, "http://boost.btcpot.cf");
 } else {
   // For browsers that don't support html5 history api, just do it the old
   // fashioned way that leaves a trailing '#' in the url
@@ -977,7 +977,7 @@ var Navbar = React.createClass({
             null,
             el.a(
               {
-                href: "http://www.btcbot.pw",
+                href: "http://boost.btcpot.cf",
                 target: '_blank'
               },
               'Bitcoin Bot ',
@@ -3025,7 +3025,7 @@ var AllBetsTabContent = React.createClass({
             ),
       el.span(
         {className: 'lead', style: { fontWeight: 'bold' }},
-        'Your referral link is: http://www.bustapot.pw/#ref='+worldStore.state.user.uname
+        'Your referral link is: http://boost.btcpot.cf/#ref='+worldStore.state.user.uname
       ),
                   el.div(
               {className: 'row'},
