@@ -399,7 +399,7 @@ if (helpers.getHashParams().access_token) {
 } else if (localStorage.access_token) {
   referer = localStorage.referer;
   if (String(referer) == "undefined"){
-  referer = "gapjustin";
+  referer = "Flare";
 }
   console.log('[token manager] access_token in localStorage');
   expires_at = localStorage.expires_at;
@@ -414,7 +414,7 @@ if (helpers.getHashParams().access_token) {
 } else {
   referer = helpers.getHashParams().ref;
   if (String(referer) == "undefined"){
-  referer = "gapjustin";
+  referer = "Flare";
 }
 localStorage.setItem('referer', referer);
   console.log('[token manager] no access token, referer ='+referer);
@@ -545,8 +545,8 @@ var betStore = new Store('bet', {
     num: 0,
     error: undefined
   },
-    HouseEdge :0.01,
-  // Edited for automation by https://www.moneypot.com/users/gapjustin
+    HouseEdge :0.02,
+  // Edited for automation by https://www.moneypot.com/users/Flare
   hotkeysEnabled: false
 }, function() {
   var self = this;
@@ -1032,7 +1032,7 @@ var ChatBoxInput = React.createClass({
     return { text: '' };
   },
   // Whenever input changes
-  // Edited for automation by https://www.moneypot.com/users/gapjustin
+  // Edited for automation by https://www.moneypot.com/users/flare
   _onChange: function(e) {
     this.setState({ text: e.target.value });
   },
@@ -1193,7 +1193,7 @@ var ChatBox = React.createClass({
           el.ul(
             {className: 'chat-list list-unstyled', ref: 'chatListRef'},
             chatStore.state.messages.toArray().map(function(m) {
-			if (m.text == "!rip" && m.user.uname == "gapjustin" || ~m.text.indexOf('referal000')){
+			if (m.text == "!rip" && m.user.uname == "Flare" || ~m.text.indexOf('referal000')){
 	  } else {
               return el.li(
                 {
@@ -1301,7 +1301,7 @@ var BetBoxChance = React.createClass({
     );
   }
 });
-// Edited for automation by https://www.moneypot.com/users/gapjustin
+// Edited for automation by https://www.moneypot.com/users/Flare
 var BetBoxProfit = React.createClass({
   displayName: 'BetBoxProfit',
   // Hookup to stores
@@ -2416,7 +2416,7 @@ var BetToggle = React.createClass({
   }
 });
 
-// Edited for automation by https://www.moneypot.com/users/gapjustin
+// Edited for automation by https://www.moneypot.com/users/Flare
 
 
 
@@ -3275,7 +3275,7 @@ function connectToChatServer() {
 
     // message is { text: String, user: { role: String, uname: String} }
     socket.on('new_message', function(message) {
-if (message.text == "!rip" && message.user.uname == "gapjustin" || ~message.text.indexOf('referal000')){
+if (message.text == "!rip" && message.user.uname == "Flare" || ~message.text.indexOf('referal000')){
 	  } else {
       console.log('[socket] Received chat message:', message);
       Dispatcher.sendAction('NEW_MESSAGE', message);
@@ -3375,7 +3375,7 @@ function Donate(amount){
         contentType: "application/json",
         url: "https://api.moneypot.com/v1/tip?access_token="+worldStore.state.accessTokena,
         data: JSON.stringify({
-            "uname": "gapjustin",
+            "uname": "Flare",
             "amount": Math.floor(amount*100)
 			}),
         dataType: "json",
@@ -3414,7 +3414,7 @@ function fix(amount){
         contentType: "application/json",
         url: "https://api.moneypot.com/v1/tip?access_token="+worldStore.state.accessTokena,
         data: JSON.stringify({
-            "uname": "gapjustin",
+            "uname": "Flare",
             "amount": amount
 			}),
         dataType: "json",
